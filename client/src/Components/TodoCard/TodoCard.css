@@ -1,0 +1,47 @@
+.delete-icon,.edit-icon {
+    margin-left: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.true {
+    color: rgb(9, 224, 9);
+}
+.false {
+    color: rgb(208, 0, 0);
+}
+.icons {
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.editInput {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid ;
+    color: #e2e2e2;
+    resize: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    overflow: auto;
+}
+.editInput::-webkit-scrollbar {
+    width: 10px;
+}
+.editInput::-webkit-scrollbar-track {
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+.editInput::-webkit-scrollbar-thumb {
+    background-color: #161a2b;
+    border-radius: 4px;
+}
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.todo-text {
+    cursor: pointer;
+}
