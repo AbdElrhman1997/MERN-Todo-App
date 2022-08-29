@@ -44,4 +44,7 @@
 }
 .todo-text {
     cursor: pointer;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
 }

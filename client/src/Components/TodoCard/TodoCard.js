@@ -1,4 +1,4 @@
-import React,{Fragment, useEffect, useRef, useState} from 'react'
+import React,{useRef, useState} from 'react'
 import {MdEdit,MdEditOff,MdDelete} from 'react-icons/md';
 import'./TodoCard.css';
 import axios from 'axios';
@@ -50,8 +50,9 @@ const TodoCard = ({text,setTasks,tasks,task}) => {
                 <p 
                     className='todo-text' 
                     ref={bodyTodo} 
-                    onClick={()=>handleComplete(task,content)}>
-                        {content?content:task.body}
+                    onClick={()=>handleComplete(task,content)}
+                >
+                    {content?content:task.body}
                 </p>:
                 <textarea 
                     type='text' cols='25' 

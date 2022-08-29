@@ -1,6 +1,6 @@
 .todo-row {
     display: grid;
-    grid-template-columns: 75% 1% 9%;
+    grid-template-columns: 75% 3% 10%;
     font-size: 1.5rem;
     text-align: left;
     justify-content: space-between;
@@ -15,6 +15,8 @@
     padding: 16px;
     border-radius: 5px;
     width: 90%;
+    transition: .1s ease-in-out;
+    animation: opacity .15s ease-in-out;
 }
 
 .todo-row:nth-child(4n + 1) {
@@ -44,4 +46,21 @@ background: linear-gradient(
 .complete {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+@keyframes opacity {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacity1 {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity: 0;
+    }
 }
