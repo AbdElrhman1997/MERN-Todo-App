@@ -16,7 +16,7 @@ function TodoForm({todos,setTodos}) {
         }
         e.preventDefault();
         
-        axios.post('https://gentle-sands-34267.herokuapp.com/api/todos/',{body:input})
+        axios.post('https://todo-app-y8d5.onrender.com/api/todos/',{body:input})
         .then((result)=>{
             setTodos([result.data.todos,...todos]);
         })
