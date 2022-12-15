@@ -9,7 +9,7 @@ const TodoCard = ({text,setTasks,tasks,task}) => {
     const bodyTodo=useRef();
 
     const handleDelete=(id)=> {
-        axios.delete(`https://gentle-sands-34267.herokuapp.com/api/todos/${id}`)
+        axios.delete(`https://todo-app-y8d5.onrender.com/api/todos/${id}`)
         .then(setTasks(tasks))
         .catch(err=>console.log(err));
     }
@@ -18,7 +18,7 @@ const TodoCard = ({text,setTasks,tasks,task}) => {
         if(!task.isCompleted) {
             if(edit) {
                 if(body) {
-                    await axios.patch(`https://gentle-sands-34267.herokuapp.com/api/todos/${task._id}`,{body:body,isCompleted:task.isCompleted})
+                    await axios.patch(`https://todo-app-y8d5.onrender.com/api/todos/${task._id}`,{body:body,isCompleted:task.isCompleted})
                     .then(setEdit(false))
                     .catch(err=>console.log(err));
                 }
@@ -33,12 +33,12 @@ const TodoCard = ({text,setTasks,tasks,task}) => {
     }
     const handleComplete=async (task,body)=>{
         if(task.isCompleted) {       
-            await axios.patch(`https://gentle-sands-34267.herokuapp.com/api/todos/${task._id}`,{body:task.body,isCompleted:false})
+            await axios.patch(`https://todo-app-y8d5.onrender.com/api/todos/${task._id}`,{body:task.body,isCompleted:false})
             .then(bodyTodo.current.parentElement.classList.add('complete'))
             .catch(err=>console.log(err));
         }
         else {
-            await axios.patch(`https://gentle-sands-34267.herokuapp.com/api/todos/${task._id}`,{body:body,isCompleted:true})
+            await axios.patch(`https://todo-app-y8d5.onrender.com/api/todos/${task._id}`,{body:body,isCompleted:true})
             .then(bodyTodo.current.parentElement.classList.remove('complete'))
             .catch(err=>console.log(err));
         }
