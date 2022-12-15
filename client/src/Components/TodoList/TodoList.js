@@ -8,7 +8,7 @@ function TodoList() {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        axios.get('https://gentle-sands-34267.herokuapp.com/api/todos/')
+        axios.get('https://todo-app-y8d5.onrender.com/api/todos/')
         .then((result) => {
             setTodos([...result.data.todos]);
         })
